@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+<body>
+    <header class="p-a w-100">
+        <div class="con d-f j-b a-l m-a h-100">
+            <nav class="w-10 d-f a-l j-c h-100">
+                <a href="index.html"><img src="images/logo.png" alt=""></a>
+                <p>ick Starter</p>
+            </nav>
+            <nav class="w-40 d-f a-l j-b h-100">
+                <a href="#" data-idx="0" class="back">메인페이지</a>
+                <a href="#" data-idx="1">펀드등록</a>
+                <a href="#" data-idx="2">펀드보기</a>
+                <a href="#" data-idx="3">투자자목록</a>
+            </nav>
+            <nav class="w-10 d-f a-l j-b h-100">
+                <a href="#">로그인</a>
+                <a href="#" data-idx="4">회원가입</a>
+            </nav>
+        </div>
+    </header>
+    <div class="one">
+        <section id="index" class="now">
+            <div class="visual">
+                <div class="text">
+                    <h2>Buiness Crowdfunding</h2>
+                    <p>you can startup</p>
+                </div>
+                <div class="cardbox">
+                </div>
+            </div>
+        </section>
+        <section id="enrollment">
+            <div class="visual">
+                <div class="text">
+                    <h2>펀드등록</h2>
+                    <p>메인페이지 -> 펀드등록</p>
+                </div>
+            </div>
+            <h2>펀드등록</h2>
+                <form action="/enrollment.html" method="POST" onsubmit="return false;" class="m-a">
+                    <li class="d-f">
+                        <div class="textcenter w-20 h-100">펀드번호</div><div class="w-30 h-100"><input type="text" readonly class="number w-100 h-70" name="number"></div>
+                        <div class="textcenter w-20 h-100">창업펀드명</div><div class="w-30 h-100"><input type="text" class="name w-100 h-70" name="name"><p class="alerttext d-n name-p">영문,한글,띄여쓰기만 가능합니다.</p></div>
+                    </li>
+                    <li class="d-f">
+                        <div class="textcenter w-20 h-100">마감날짜</div><div class="w-30 h-100"><input type="date" class="date w-100 h-70" name="date"><p class="alerttext d-n date-p">없는 날짜입니다.</p></div>
+                        <div class="textcenter w-20 h-100">마감시간</div><div class="w-30 h-100"><input type="time" class="hour w-100 h-70" name="hour" step="1"><p class="alerttext d-n hour-p">없는 시간입니다.</p></div>
+                    </li>
+                    <li class="d-f">
+                        <div class="textcenter w-20 h-100">모집금액</div><div class="w-80 h-100"><input type="text" class="pay w-100 h-70" name="pay"><p class="alerttext d-n pay-p">자연수만 입력가능합니다.</p></div>
+                    </li>
+                    <li class="d-f">
+                        <div class="textcenter w-20 h-100">상세설명</div><textarea name="" id="" class="w-80 h-100" maxlength="500" cols="30" rows="10"></textarea>
+                    </li>
+                    <li class="d-f">
+                        <label for="img" class="textcenter w-20 h-100">이미지추가</label>
+                        <input type="file" class="d-n" id="img">
+                        <div>
+                            <input type="text" readonly class="imgview w-100 h-70">
+                            <p class="alerttext d-n img-p">이미지는 5byte 이하,jpg,png만 가능합니다.</p>
+                        </div>
+                    </li>
+                    <li class="d-f" >
+                        <button class="addFund">펀드등록</button>
+                    </li>
+                </form>
+        </section>
+        <section id="fundList">
+            <div class="visual">
+                <div class="text">
+                    <h2>펀드보기</h2>
+                    <p>메인페이지 -> 펀드보기</p>
+                </div>
+            </div>
+            <h2>펀드보기</h2>
+            <div class="cardbox">
+            </div>
+            <div class="pagination d-f j-c">
+                <li class="page-item"><a href="#" class="page-link">&lt;</a></li>
+                <li class="page-item active"><a href="#" class="page-link">1</a></li>
+                <li class="page-item"><a href="#" class="page-link">2</a></li>
+                <li class="page-item"><a href="#" class="page-link">3</a></li>
+                <li class="page-item"><a href="#" class="page-link">4</a></li>
+                <li class="page-item"><a href="#" class="page-link">5</a></li>
+                <li class="page-item"><a href="#" class="page-link">6</a></li>
+                <li class="page-item"><a href="#" class="page-link">7</a></li>
+                <li class="page-item"><a href="#" class="page-link">8</a></li>
+                <li class="page-item"><a href="#" class="page-link">9</a></li>
+                <li class="page-item"><a href="#" class="page-link">10</a></li>
+                <li class="page-item"><a href="#" class="page-link">&gt;</a></li>
+            </div>
+        </section>
+        <section id="invList">
+            <div class="visual">
+                <div class="text">
+                    <h2>투자자목록</h2>
+                    <p>메인페이지 -> 투자자목록</p>
+                </div>
+            </div>
+            <h2>투자자목록</h2>
+            <div class="div">
+                <select name="" id="">
+                    <option value="">최근등록순</option>
+                    <option value="">펀드별</option>
+                    <option value="">투자자별</option>
+                </select>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th class="w-10">펀드번호</th>
+                            <th class="w-20">창업펀드명</th>
+                            <th class="w-20">투자자명</th>
+                            <th class="w-20">투자금액</th>
+                            <th class="w-20">투자지분</th>
+                            <th class="w-10"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+            <div class="pagination d-f j-c">
+                <li class="page-item"><a href="#" class="page-link">&lt;</a></li>
+                <li class="page-item active"><a href="#" class="page-link">1</a></li>
+                <li class="page-item"><a href="#" class="page-link">2</a></li>
+                <li class="page-item"><a href="#" class="page-link">3</a></li>
+                <li class="page-item"><a href="#" class="page-link">4</a></li>
+                <li class="page-item"><a href="#" class="page-link">5</a></li>
+                <li class="page-item"><a href="#" class="page-link">6</a></li>
+                <li class="page-item"><a href="#" class="page-link">7</a></li>
+                <li class="page-item"><a href="#" class="page-link">8</a></li>
+                <li class="page-item"><a href="#" class="page-link">9</a></li>
+                <li class="page-item"><a href="#" class="page-link">10</a></li>
+                <li class="page-item"><a href="#" class="page-link">&gt;</a></li>
+            </div>
+        </section>
+        <section id="register">
+            <div class="visual">
+                <div>
+                    <form action="/register.html" method="POST" class="m-a" onsubmit="return false;">
+                        <li>
+                            <h2>회원가입</h2>
+                        </li>
+                        <li>
+                            <input type="text" class="w-100  email" placeholder="이메일" name="email" >
+                            <p class="alerttext d-n email-p">이메일형식이 잘못되었습니다.</p>
+                        </li>
+                        <li>
+                            <input type="text" class="w-100  name" placeholder="이름" name="name" >
+                            <p class="alerttext d-n name-p">이름이 비여있습니다.</p>
+                        </li>
+                        <li>
+                            <input type="password" class="w-100  password" placeholder="비밀번호" name="password" >
+                            <p class="alerttext d-n password-p">영문,특문,숫자가 들어가야합니다.</p>
+                        </li>
+                        <li>
+                            <input type="password" class="w-100  passwordc" placeholder="비밀번호확인" name="passwordc" >
+                            <p class="alerttext d-n passwordc-p">비밀번호와 일치하지 않습니다.</p>
+                        </li>
+                        <li>
+                            <button class="reg">회원가입</button>
+                        </li>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer>
+        Tel) 031-778-2300
+우) 13587 경기 성남시 분당구 불정로386번길 35 양영디지털고등학교 <br>
+Copyright Gondr Allright reserved. Since 2017-03-01
+    </footer>
+    <!-- <div class="popup">
+        <div>
+            <h2>투자자()</h2>
+            <div class="btn">×</div>
+            <div class="div">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th class="w-10">펀드번호</th>
+                            <th class="w-20">창업펀드명</th>
+                            <th class="w-20">투자자명</th>
+                            <th class="w-20">투자금액</th>
+                            <th class="w-20">투자지분</th>
+                            <th class="w-10"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th class="w-10">A0001</th>
+                            <td class="w-20">김태연 게임 시키기</td>
+                            <td class="w-20">김규태</td>
+                            <td class="w-20">10,000원</td>
+                            <td class="w-20">
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-striped" role="progressbar" style="width:20%;"></div>
+                                </div>
+                            </td>
+                            <td class="w-10">20%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- <div id="buy" class="popup">
+        <form action="/buy" method="POST" class="m-a" onsubmit="return false;" >
+            <li><h2>투자하기</h2></li>
+            <li><input type="text" readonly name="number" class="number"></li>
+            <li><input type="text" readonly name="fundName" class="fundName"></li>
+            <li><input type="text" readonly name="name" class="name"></li>
+            <li>
+                <input type="text" name="pay" class="pay">
+                <p class="alerttext d-n pay-p">자연수만 입력하세요.</p>
+            </li>
+            <li>
+                <canvas width="260" height="90"></canvas>
+                <input type="range" max="10" min="1" class="size">
+            </li>
+            <li>
+                <button>취소</button>
+                <button>투자</button>
+            </li>
+        </form>
+    </div> -->
+
+    <div id="alert" class="p-f">
+        <!-- <div class="alertbox d-f p-a j-c a-l alertg">
+            <p class="font">strsadfasdasdfassdfsdgsdfgsfas</p>
+            <button class="b p-a">×</button>
+        </div> -->
+    </div>
+
+
+</body>
+
+
+<script src="/js/sign.js"></script>
+<script src="/js/data.js"></script>
+<script src="/js/index.js"></script>
+<script src="/js/register.js"></script>
+<script src="/js/fundList.js"></script>
+<script src="/js/invList.js"></script>
+<script src="/js/enrollment.js"></script>
+<script src="/js/all.js"></script>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+<body>
+    <header class="p-a w-100">
+        <div class="con d-f j-b a-l m-a  h-100">
+            <nav class="w-10 d-f a-l j-c h-100">
+                <a href="index.html"><img src="images/logo.png" alt=""></a>
+                <p>ick Starter</p>
+            </nav>
+            <nav class="w-40 d-f a-l j-b h-100">
+                <a href="index.html">메인페이지</a>
+                <a href="enrollment.html">펀드등록</a>
+                <a href="fundList.html">펀드보기</a>
+                <a href="invList.html">투자자목록</a>
+            </nav>
+            <nav class="w-10 d-f a-l j-b h-100">
+                <a href="#">로그인</a> 
+                <a href="register.html">회원가입</a>
+            </nav>
+        </div>
+    </header>
+    <div class="one">
+        <section id="enrollment">
+            <div class="visual">
+                <div class="text">
+                    <h2>펀드등록</h2>
+                    <p>메인페이지 -> 펀드등록</p>
+                </div>
+            </div>
+            <h2>펀드등록</h2>
+                <form action="/enrollment.html" method="POST" onsubmit="return false;" class="m-a">
+                    <li class="d-f">
+                        <div class="textcenter w-20 h-100">펀드번호</div><div class="w-30 h-100"><input type="text" readonly class="number w-100 h-70" name="number"></div>
+                        <div class="textcenter w-20 h-100">창업펀드명</div><div class="w-30 h-100"><input type="text" class="name w-100 h-70" name="name"><p class="alerttext d-n name-p">영문,한글,띄여쓰기만 가능합니다.</p></div>
+                    </li>
+                    <li class="d-f">
+                        <div class="textcenter w-20 h-100">마감날짜</div><div class="w-30 h-100"><input type="date" class="date w-100 h-70" name="date"><p class="alerttext d-n date-p">없는 날짜입니다.</p></div>
+                        <div class="textcenter w-20 h-100">마감시간</div><div class="w-30 h-100"><input type="time" class="hour w-100 h-70" name="hour" step="1"><p class="alerttext d-n hour- p">없는 시간입니다.</p></div>
+                    </li>
+                    <li class="d-f">
+                        <div class="textcenter w-20 h-100">모집금액</div><div class="w-80 h-100"><input type="text" class="pay w-100 h-70" name="pay"><p class="alerttext d-n pay- p">자연수만 입력가능합니다.</p></div>
+                    </li>
+                    <li class="d-f">
+                        <div class="textcenter w-20 h-100">상세설명</div><textarea name="" id="" class="w-80 h-100" maxlength="500" cols="30" rows="10"></textarea>
+                    </li>
+                    <li class="d-f">
+                        <label for="img" class="textcenter w-20 h-100">이미지추가</label>
+                        <input type="file" class="d-n" id="img">
+                        <div>
+                            <input type="text" readonly class="imgview w-100 h-70">
+                            <p class="alerttext d-n img-p">이미지는 5byte 이하,jpg,png만 가능합니다.</p>
+                        </div>
+                    </li>
+                    <li class="d-f" >
+                        <button class="addFund">펀드등록</button>
+                    </li>
+                </form>
+        </section>
+    </div>
+    <footer>
+        Tel) 031-778-2300
+우) 13587 경기 성남시 분당구 불정로386번길 35 양영디지털고등학교 <br>
+Copyright Gondr Allright reserved. Since 2017-03-01
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,744 @@
+@font-face {
+    src: url("font/NotoSansKR-Thin.otf");
+    font-weight: 100;
+    font-family: "noto";
+}
+
+@font-face {
+    src: url("font/NotoSansKR-Light.otf");
+    font-weight: 200;
+    font-family: "noto";
+}
+@font-face {
+    src: url("font/NotoSansKR-Medium.otf");
+    font-weight: 300;
+    font-family: "noto";
+}
+@font-face {
+    src: url("font/NotoSansKR-Regular.otf");
+    font-weight: 400;
+    font-family: "noto";
+}
+@font-face {
+    src: url("font/NotoSansKR-Bold.otf");
+    font-weight: 500;
+    font-family: "noto";
+}
+@font-face {
+    src: url("font/NotoSansKR-Black.otf");
+    font-weight: 600;
+    font-family: "noto";
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.w-10{width: 10%;}
+.w-20{width: 20%;}
+.w-30{width: 30%;}
+.w-40{width: 40%;}
+.w-50{width: 50%;}
+.w-60{width: 60%;}
+.w-70{width: 70%;}
+.w-80{width: 80%;}
+.w-90{width: 90%;}
+.w-100{width: 100%;}
+.h-50{height: 50%;}
+.h-70{height: 70%;}
+.h-100{height: 100%;}
+.d-f{display: flex;}
+.d-n{display: none;}
+.cal{flex-direction: column;}
+.j-c{justify-content: center;}
+.j-a{justify-content: space-around;}
+.j-b{justify-content: space-between;}
+.a-l{align-items: center;}
+.p-a{position: absolute;}
+.p-r{position: relative;}
+.p-f{position: fixed;}
+.con{width: 1600px;}
+.m-a{margin: 0 auto;}
+li{list-style: none;}
+.font {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.font-h {
+    width: 50%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.font-s {
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.alerttext {
+    color: #f00;
+    font-size: 10px;
+}
+.redborder {
+    border: 1px solid #f00 !important;
+}
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0004;
+}
+
+.popup > div {
+    background-color: #fff;
+    height: 400px;
+    width: 1000px;
+    position: relative;
+}
+.popup .div {
+    height: 290px;
+    /* overflow-y: scroll; */
+}
+tr {
+    height: 50px;
+}
+.popup .btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.popup .table {
+    margin: 0 auto;
+    width: 900px;
+    /* height: 290px; */
+
+}
+.scroll {
+    overflow-y: scroll;
+}
+#buy > form {
+    width: 300px;
+    height: 400px;
+    background-color: #fff;
+    padding: 20px;
+}
+
+#buy li {
+    /* height: 40px; */
+    min-height: 30px;
+}
+#buy li:nth-child(5) {
+    height: 50px;
+}
+#buy li input{
+    width:100%;
+}
+#buy button {
+    margin: 0 10px;
+    border: 1px solid #ddd;
+    background-color: #0000;
+    width: 100px;
+    height: 30px;
+}
+#buy canvas {
+    border: 1px solid #000;
+}
+
+#alert {
+    bottom: 50px;
+    right: 40px;
+}
+
+.alertbox {
+    top: 0;
+    width: 220px;
+    height: 50px;
+    border-radius: 30px;
+    background-color: #f00;
+    position: relative;
+    margin-top: 10px;
+}
+
+.alertbox > button {
+    position: absolute;
+    border: none;
+    background-color: #0000;
+    top: 13px;
+    right: 6px;
+    color: #fff;
+}
+
+.alertbox > p {
+    margin:  0 !important;
+    width: 85%;
+    height: auto;
+    color: #fff;
+    font-size: 10px;
+}
+.alertg {
+    background-color: #28a745 !important;
+}
+
+.pagination {
+    margin-bottom: 10px;
+}
+.one {
+    position: relative;
+}
+
+.one > section {
+    width: 100%;
+}
+
+
+header {
+    height: 100px;
+    border-bottom: 1px solid #fff;
+    z-index: 1;
+}
+header a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+header a {
+    color: #fff;
+}
+header img {
+    width: 50px;
+}
+header p {
+    color: #fff;
+    margin: 0 !important;
+    font-size: 24px;
+}
+#index {
+    height: 100vh;
+}
+
+#index .visual {
+    height: 100%;
+    padding-top: 100px;
+    background-image: linear-gradient(10deg,rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url("images/sample8.jpg");
+}
+#index .visual .text {
+    padding-top: 280px;
+    text-align: center;
+    font-size: 40px;
+    color: #fff;
+}
+#index .visual .text h2 {
+    font-size: 50px;
+}
+#index .cardbox {
+    margin-top: 100px;
+    display: flex;
+    justify-content:space-around;
+}
+#index .card {
+    width: 300px;
+    background-color: #0000;
+    border: 1px solid #fff;
+    border-radius: 0;
+    color: #fff;
+    height: 130px;
+    position: relative;
+    padding: 10px;
+    margin-top: 30px;
+}
+#index .card h2 {
+    font-size: 20px;
+}
+#index .listView {
+    position: absolute;
+    bottom: 10px;
+    right: 0px;
+    background-color: #0000;
+    border: none;
+    border-bottom: 1px solid #fff;
+    padding-right: 20px;
+    color: #fff;
+}
+#index .card:first-child {
+    height: 160px;
+    background-color: #0863c5;
+    border: none;
+    margin-top: 0;
+}
+
+#enrollment {
+    height: 100vh;
+}
+
+#enrollment .visual {
+    height: 300px;
+    padding-top: 100px;
+    background-image: linear-gradient(10deg,rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url("images/sample8.jpg");
+}
+#enrollment .visual .text {
+    padding-top: 50px;
+    padding-left: 1600px;
+    font-size: 14px;
+    color: #fff;
+}
+#enrollment .visual .text h2 {
+    font-size: 25px;
+}
+#enrollment > h2 {
+    padding-top: 40px;
+    padding-left: 200px;
+    padding-bottom: 20px;
+}
+
+#enrollment form {
+    width: 1000px;
+}
+
+
+#enrollment li {
+    height: 40px;
+    border: 1px solid #ddd;
+    border-bottom:none;
+}
+#enrollment li:last-child {
+    border-left:none;
+    border-right:none;
+}
+
+#enrollment .textcenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f2f2;
+}
+#enrollment li input {
+    border: none;
+}
+
+#enrollment textarea {
+    border: none;
+}
+#enrollment li:nth-child(4) {
+    height: 150px;
+}
+#enrollment button {
+    width: 200px;
+    height: 30px;
+    border-radius: 30px;
+    border: none;
+    background-color: #007bff;
+    margin-left: 800px;
+    margin-top: 20px;
+    color: #fff;
+}
+
+#fundList {
+    height: 123vh;
+}
+
+#fundList .visual {
+    height: 300px;
+    padding-top: 100px;
+    background-image: linear-gradient(10deg,rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url("images/sample8.jpg");
+}
+#fundList .visual .text {
+    padding-top: 50px;
+    padding-left: 1600px;
+    font-size: 14px;
+    color: #fff;
+}
+#fundList .visual .text h2 {
+    font-size: 25px;
+}
+#fundList > h2 {
+    padding-top: 40px;
+    padding-left: 200px;
+    padding-bottom: 20px;
+}
+
+#fundList .cardbox {
+    width: 1125px;
+    height: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+#fundList .card {
+    width: 20%;
+    height: 50%;
+    position: relative;
+    overflow: hidden;
+    border: none;
+    border-radius: 0;
+}
+#fundList .card:hover .img {
+    filter: brightness(70%);   
+}
+
+#fundList .card:hover .canvas {
+    top: 0;
+}
+#fundList .img {
+    transition: all 0.5s;
+    width: 100%;
+    height: 100%;
+}
+#fundList .img > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#fundList .card .text {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+    color: #fff;
+    text-align: center;
+    background-color: #0004;
+}
+#fundList .card .canvas {
+    position: absolute;
+    transition: all 0.5s;
+    top: 100%;
+    text-align: center;
+    color: #fff;
+    width: 100%;
+}
+#fundList .card button {
+    border: 1px solid #fff;
+    background-color: #0000;
+    color: #fff;
+}
+
+
+#invList {
+    height: 100vh;
+}
+
+#invList .visual {
+    height: 300px;
+    padding-top: 100px;
+    background-image: linear-gradient(10deg,rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url("images/sample8.jpg");
+}
+#invList .visual .text {
+    padding-top: 50px;
+    padding-left: 1600px;
+    font-size: 14px;
+    color: #fff;
+}
+#invList .visual .text h2 {
+    font-size: 25px;
+}
+#invList > h2 {
+    padding-top: 40px;
+    padding-left: 200px;
+    padding-bottom: 20px;
+}
+#invList .div {
+    width: 1000px;
+    height: 350px;
+    padding-bottom: 20px;
+    margin: 0 auto;
+}
+#invList select {
+    margin-left: 900px;
+}
+
+#register {
+    height: 100vh;
+}
+
+#register .visual {
+    height: 100%;
+    padding-top: 100px;
+    background-image: linear-gradient(10deg,rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url("images/sample8.jpg");
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#register .visual > div {
+    width: 380px;
+    height: 480px;
+    background-color: #fff;
+    padding: 30px;
+}
+#reigster form {
+    
+}
+
+#register li {
+    height: 60px;
+}
+#register li input {
+    border: none;
+    border-bottom: 1px solid #000;
+}
+#register li input::placeholder {
+    color: #000;
+}
+#register button {
+    width: 200px;
+    height: 30px;
+    border: none;
+    border-radius: 30px;
+    color: #fff;
+    background-color: #007bff;
+    margin-left: 50px;
+    margin-top: 20px;
+}
+
+
+footer {
+    background-color: #333;
+    color: #ddd;
+    text-align: center;
+    height: 130px;
+    padding-top: 40px;
+
+}
+
+
+
+@media(max-width:480px) {
+    .con {
+        width: 440px;
+    }
+    header {
+
+    }
+    header .con {
+        flex-direction: column;
+    }
+    header nav {
+        width: 100% !important;
+    }
+    header nav:last-child {
+        justify-content: space-around !important;
+    }
+
+
+    #index .cardbox {
+        margin-top: 50px;
+        display: flex;
+        justify-content:space-around;
+        flex-wrap: wrap;
+    }
+    #index .visual .text {
+        padding-top: 200px;
+        text-align: center;
+        font-size: 40px;
+        color: #fff;
+    }
+
+    #index .card {
+        width: 200px;
+        background-color: #0000;
+        border: 1px solid #fff;
+        border-radius: 0;
+        color: #fff;
+        height: 130px;
+        position: relative;
+        padding: 10px;
+        margin-top: 30px;
+        font-size: 14px;
+    }
+    #index .text {
+        padding-top: 180px;
+    }
+    #index .card h2 {
+        font-size: 20px;
+    }
+    #index .listView {
+        position: absolute;
+        bottom: 10px;
+        right: 0px;
+        background-color: #0000;
+        border: none;
+        border-bottom: 1px solid #fff;
+        padding-right: 20px;
+        color: #fff;
+        font-size: 14px;
+    }
+    #index .card:first-child {
+        height: 130px;
+        background-color: #0863c5;
+        border: none;
+        margin-top: 30px;
+
+    }
+    
+    #enrollment {
+        height: 100vh;
+    }
+    
+    #enrollment .visual {
+        height: 300px;
+        padding-top: 100px;
+        background-image: linear-gradient(10deg,rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url("images/sample8.jpg");
+    }
+    #enrollment .visual .text {
+        padding-top: 50px;
+        padding-left: 300px;
+        font-size: 10px;
+        color: #fff;
+    }
+    #enrollment .visual .text h2 {
+        font-size: 24px;
+    }
+    #enrollment > h2 {
+        padding-top: 40px;
+        padding-left: 40px;
+        font-size: 20px;
+        padding-bottom: 20px;
+    }
+    
+    #enrollment form {
+        width: 440px;
+    }
+    
+    
+    #enrollment li {
+        height: 40px;
+        border: 1px solid #ddd;
+        border-bottom:none;
+    }
+    #enrollment li:last-child {
+        border-left:none;
+        border-right:none;
+    }
+    
+    #enrollment .textcenter {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #f0f2f2;
+    }
+    #enrollment li input {
+        border: none;
+    }
+    
+    #enrollment textarea {
+        border: none;
+    }
+    #enrollment li:nth-child(4) {
+        height: 150px;
+    }
+    #enrollment button {
+        width: 200px;
+        height: 30px;
+        border-radius: 30px;
+        border: none;
+        background-color: #007bff;
+        margin-left: 100px;
+        margin-top: 20px;
+        color: #fff;
+    }
+
+    #fundList .visual .text {
+        padding-top: 50px;
+        padding-left: 300px;
+        font-size: 10px;
+        color: #fff;
+    }
+    #fundList .visual .text h2 {
+        font-size: 24px;
+    }
+    #fundList > h2 {
+        padding-top: 40px;
+        padding-left: 40px;
+        font-size: 20px;
+        padding-bottom: 20px;
+    }
+
+    #fundList .cardbox {
+        width: 440px;
+        height: 700px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+    }
+    #fundList .card {
+        width: 50%;
+        height: 50%;
+        position: relative;
+        overflow: hidden;
+        border: none;
+        border-radius: 0;
+    }
+    #fundList .card:hover .img {
+        filter: brightness(70%);   
+    }
+    
+    #fundList .card:hover .canvas {
+        top: 0;
+    }
+    #fundList .img {
+        transition: all 0.5s;
+        width: 100%;
+        height: 100%;
+    }
+    #fundList .img > img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    #fundList .card .text {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 30px;
+        color: #fff;
+        text-align: center;
+        background-color: #0004;
+    }
+    #fundList .card .canvas {
+        position: absolute;
+        transition: all 0.5s;
+        top: 100%;
+        text-align: center;
+        color: #fff;
+        width: 100%;
+    }
+    #fundList .card button {
+        border: 1px solid #fff;
+        background-color: #0000;
+        color: #fff;
+    }
+
+
+    #invList .visual .text {
+        padding-top: 50px;
+        padding-left: 300px;
+        font-size: 10px;
+        color: #fff;
+    }
+    #invList .visual .text h2 {
+        font-size: 24px;
+    }
+    #invList > h2 {
+        padding-top: 40px;
+        padding-left: 40px;
+        font-size: 20px;
+        padding-bottom: 20px;
+    }
+    #invList .div {
+        width: 440px;
+        overflow-x: scroll;
+    }
+    #invList .table {
+        width: 1000px;
+    }
+
+
+}
